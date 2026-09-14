@@ -1,0 +1,137 @@
+:root {
+  --dw-paper: #f4ecd8;
+  --dw-paper-dark: #e8dcc0;
+  --dw-ink: #2b2013;
+  --dw-brown: #5c3a21;
+  --dw-ochre: #c99a2e;
+  --dw-ultramarine: #2c4a8a;
+  --dw-sienna: #9a4a2b;
+  --dw-red: #a3272c;
+  --dw-gold: #a67c1e;
+}
+
+.slidev-layout {
+  background: var(--dw-paper);
+  color: var(--dw-ink);
+  font-family: 'Georgia', 'Iowan Old Style', serif;
+}
+
+.slidev-layout h1 {
+  color: var(--dw-brown);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.slidev-layout h2 {
+  color: var(--dw-sienna);
+  border-bottom: 2px solid var(--dw-ochre);
+  padding-bottom: 0.2em;
+  display: inline-block;
+}
+
+.slidev-layout h3 {
+  color: var(--dw-ultramarine);
+}
+
+.slidev-layout a {
+  color: var(--dw-ultramarine);
+}
+
+.slidev-layout strong {
+  color: var(--dw-sienna);
+}
+
+.slidev-layout code {
+  background: var(--dw-paper-dark);
+  color: var(--dw-brown);
+}
+
+.dw-eyebrow {
+  color: var(--dw-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dw-swatches {
+  display: flex;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.dw-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.dw-swatch .dot {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.dw-values {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.dw-value-block {
+  flex: 1;
+  height: 6rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.dw-card {
+  background: var(--dw-paper-dark);
+  border-left: 4px solid var(--dw-ochre);
+  border-radius: 0.3rem;
+  padding: 1rem 1.4rem;
+  margin: 0.8rem 0;
+}
+
+.dw-steps {
+  counter-reset: dw-step;
+}
+
+.dw-step {
+  counter-increment: dw-step;
+  position: relative;
+  padding-left: 3rem;
+  margin: 1.1rem 0;
+}
+
+/* image-left/image-right split layouts: the image panel has no background
+   of its own, so a contain-fit SVG letterboxes to white instead of paper */
+.grid.grid-cols-2.auto-rows-fr > div[style] {
+  background-color: var(--dw-paper);
+}
+
+.dw-step::before {
+  content: counter(dw-step);
+  position: absolute;
+  left: 0;
+  top: -0.15rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: var(--dw-ultramarine);
+  color: var(--dw-paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: Georgia, serif;
+}

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="wash5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+    <filter id="soft5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+    <radialGradient id="lemonGrad5" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#e0b93f" />
+      <stop offset="70%" stop-color="#c99a2e" />
+      <stop offset="100%" stop-color="#a3272c" stop-opacity="0.55" />
+    </radialGradient>
+    <linearGradient id="clothGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c99a2e" />
+      <stop offset="100%" stop-color="#9a4a2b" />
+    </linearGradient>
+  </defs>
+
+  <!-- postcard border -->
+  <rect width="400" height="300" fill="#e8dcc0" />
+  <rect x="14" y="14" width="372" height="272" fill="#f4ecd8" />
+
+  <g>
+    <ellipse cx="150" cy="104" rx="220" ry="114" fill="#2c4a8a" opacity="0.5" filter="url(#wash5)" />
+    <ellipse cx="300" cy="160" rx="160" ry="94" fill="#9a4a2b" opacity="0.35" filter="url(#wash5)" />
+
+    <line x1="24" y1="238" x2="376" y2="238" stroke="#2b1d12" stroke-width="3" opacity="0.55" />
+    <ellipse cx="212" cy="244" rx="130" ry="11" fill="#2b1d12" opacity="0.3" />
+
+    <path d="M50,238 L50,190 L118,166 L176,196 L176,238 Z" fill="url(#clothGrad5)" filter="url(#soft5)" />
+    <path d="M98,180 L138,208" fill="none" stroke="#2b1d12" stroke-width="2" opacity="0.4" />
+    <path d="M138,208 L176,196 L176,238 L154,238 Z" fill="#2b1d12" opacity="0.35" filter="url(#soft5)" />
+
+    <rect x="232" y="156" width="70" height="68" rx="12" fill="#2c4a8a" filter="url(#soft5)" />
+    <ellipse cx="267" cy="156" rx="35" ry="11" fill="#3a5a9a" filter="url(#soft5)" />
+    <path d="M302,172 q23,10 0,34" fill="none" stroke="#2c4a8a" stroke-width="5" opacity="0.85" />
+    <path d="M267,156 L302,156 L302,224 L267,224 Z" fill="#2b1d12" opacity="0.28" filter="url(#soft5)" />
+
+    <ellipse cx="176" cy="202" rx="45" ry="32" fill="url(#lemonGrad5)" filter="url(#soft5)" />
+    <path d="M188,174 A45,32 0 0 1 202,226 A29,19 0 0 0 188,174 Z" fill="#2b1d12" opacity="0.4" filter="url(#soft5)" />
+
+    <!-- the reserved highlight: untouched paper white -->
+    <ellipse cx="160" cy="188" rx="9" ry="5.5" fill="#f4ecd8" />
+  </g>
+
+  <!-- gold frame line -->
+  <rect x="14" y="14" width="372" height="272" fill="none" stroke="#c99a2e" stroke-width="1.5" />
+
+  <text x="200" y="276" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#5c3a21">stop — the white was always the highlight</text>
+</svg>

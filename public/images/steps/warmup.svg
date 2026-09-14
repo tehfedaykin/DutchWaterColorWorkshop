@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+    <radialGradient id="wetGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#2c4a8a" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#9a4a2b" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#9a4a2b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="#f4ecd8" />
+  <rect x="14" y="14" width="372" height="272" rx="6" fill="none" stroke="#d8c9a3" stroke-width="1.5" stroke-dasharray="4 5" />
+
+  <!-- swatch 1: wet-on-wet blend -->
+  <text x="70" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#5c3a21">wet-on-wet</text>
+  <circle cx="70" cy="110" r="46" fill="url(#wetGrad)" filter="url(#soft)" />
+
+  <!-- swatch 2: wet-on-dry crisp edge -->
+  <text x="200" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#5c3a21">wet-on-dry</text>
+  <path d="M162,90 Q200,72 238,92 Q246,120 230,146 Q200,158 172,144 Q158,118 162,90 Z" fill="#c99a2e" opacity="0.9" />
+  <path d="M162,90 Q200,72 238,92 Q246,120 230,146 Q200,158 172,144 Q158,118 162,90 Z" fill="none" stroke="#8a6a1e" stroke-width="1" opacity="0.5" />
+
+  <!-- swatch 3: dry brush texture -->
+  <text x="330" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#5c3a21">dry brush</text>
+  <g stroke="#a3272c" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <path d="M300,84 Q330,80 360,88" />
+    <path d="M296,100 Q330,94 364,104" stroke-width="4" opacity="0.65" />
+    <path d="M300,116 Q330,112 358,120" stroke-width="3" opacity="0.5" />
+    <path d="M304,132 Q328,130 352,136" stroke-width="2.5" opacity="0.4" />
+  </g>
+
+  <!-- little brush + water drop motif -->
+  <g transform="translate(200,225)">
+    <ellipse cx="0" cy="18" rx="30" ry="10" fill="#2c4a8a" opacity="0.18" />
+    <path d="M-4,-30 L4,-30 L7,10 Q0,18 -7,10 Z" fill="#5c3a21" />
+    <rect x="-5" y="-46" width="10" height="18" rx="3" fill="#9a4a2b" />
+    <rect x="-3" y="-58" width="6" height="14" rx="2" fill="#c99a2e" />
+  </g>
+
+  <text x="200" y="284" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#8a7f68">a little water, a little pigment, no wrong answers</text>
+</svg>
