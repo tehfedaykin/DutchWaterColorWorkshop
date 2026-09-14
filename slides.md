@@ -9,9 +9,6 @@ mdc: true
 fonts:
   sans: Georgia
   serif: Georgia
----
-
----
 src: ./pages/01-cover.md
 ---
 
